@@ -1,17 +1,64 @@
 body {
     background-color: rgb(221, 196, 10);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
 }
-h1{ color: blue;
+
+h1 {
+    color: blue;
     font-style: italic;
-}
-h2{ color: blue;
-    font-style: italic;
-}
-.gigica{
-    width:50%;
     text-align: center;
+    font-size: 40px;
 }
+
+h2 {
+    color: blue;
+    font-style: italic;
+    border-bottom: 2px solid blue;
+    padding-bottom: 5px;
+}
+
 h3 {
     font-style: italic;
     color: blue;
 }
+
+.gigica {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 17px;
+    text-align: justify;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .gigica {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+ css
