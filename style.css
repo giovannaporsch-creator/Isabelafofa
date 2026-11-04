@@ -1,64 +1,273 @@
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(221, 196, 10);
+    background: linear-gradient(135deg, #f9d5e5, #d9c2f0, #fce4ec);
     font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.6;
+    margin: 0;
+    padding: 25px;
+    color: #49334f;
 }
 
-h1 {
-    color: blue;
-    font-style: italic;
-    text-align: center;
-    font-size: 40px;
-}
-
-h2 {
-    color: blue;
-    font-style: italic;
-    border-bottom: 2px solid blue;
-    padding-bottom: 5px;
-}
-
-h3 {
-    font-style: italic;
-    color: blue;
-}
-
-.gigica {
-    display: block;
-    width: 50%;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-p {
-    font-size: 17px;
-    text-align: justify;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-footer {
+header {
     text-align: center;
     padding: 20px;
 }
 
+header h1 {
+    color: #92278f;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #92278f;
+    font-style: italic;
+    font-size: 20px;
+}
+
+h2 {
+    color: #92278f;
+    text-align: center;
+    font-size: 28px;
+}
+
+h3 {
+    color: #92278f;
+}
+
+p {
+    line-height: 1.8;
+}
+
+section:not(.quiz) {
+    margin: 30px auto;
+}
+
+main > section > p {
+    background: #ffffffc9;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+.gigica {
+    width: 55%;
+    max-width: 650px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px #0003;
+}
+
+ul {
+    background: #ffffffc9;
+    padding: 25px 45px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.grupo {
+    text-align: center;
+    background: #ffffffc9;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.grupo img {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #0002;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #92278f44;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-texto {
+    padding: 20px;
+}
+
+.card-texto h3 {
+    text-align: center;
+}
+
+.card-texto p {
+    text-align: justify;
+}
+
+/* QUIZ */
+
+.quiz {
+    background: linear-gradient(135deg, #fff, #fce4ec);
+    padding: 35px;
+    margin: 50px auto;
+    max-width: 850px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #0002;
+}
+
+.quiz h2 {
+    font-size: 30px;
+}
+
+.quiz-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pergunta {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #0001;
+}
+
+.pergunta h3 {
+    margin-top: 0;
+}
+
+.pergunta label {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #e5c3df;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pergunta label:hover {
+    background: #f9e1f3;
+    border-color: #92278f;
+}
+
+.pergunta input {
+    accent-color: #92278f;
+    margin-right: 8px;
+}
+
+.botao-quiz {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #92278f, #d64c9b);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-quiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px #92278f66;
+}
+
+.resultado {
+    display: none;
+    text-align: center;
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #0002;
+}
+
+.resultado img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 15px;
+}
+
+.resultado h3 {
+    font-size: 27px;
+}
+
+.frase-final {
+    color: #92278f;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #92278f;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* CELULAR */
+
 @media (max-width: 600px) {
-    .gigica {
-        width: 90%;
+    body {
+        padding: 12px;
     }
 
-    h1 {
-        font-size: 32px;
+    header h1 {
+        font-size: 40px;
+    }
+
+    .gigica {
+        width: 95%;
+    }
+
+    .quiz {
+        padding: 18px;
+    }
+
+    .quiz h2 {
+        font-size: 24px;
+    }
+
+    .card img {
+        height: 240px;
     }
 }
- css
